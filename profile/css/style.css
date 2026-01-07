@@ -28,16 +28,6 @@ body {font-size: 1.8rem; color: #222; font-family: var(--f-kr); background: var(
         overflow: hidden; color: #fff}
 
 
-/*로고*/
-h1 { position:fixed; top:50px; left:50px; z-index:10;}
-h1 img { width:200px; height:auto;}
-
-/*sns*/
-#sns { position:fixed; top:40px; right:50px; z-index:14; overflow: hidden;}
-#sns li { float:left; margin-left:20px;}
-#sns li i { font-size:25px; color:#111; opacity:0.5;transition:all 0.5s;}
-#sns li i:hover { transform:scale(1.5); opacity:1;}
-
 /*메뉴*/
 #menu {position:fixed; height: 100%; padding-top: 10vh;
      top:50%; left:-118px; z-index:13; transform: translateY(-50%);
@@ -69,7 +59,6 @@ h1 img { width:200px; height:auto;}
 #menu li.on a{font-weight: 700; opacity: 1;}
 #menu li:hover a span{background: #333; color: #fff;}
 #menu li.on a span{background: #333; color: #fff;}
-
 
 #wrap{overflow: hidden; position: relative;}
 
@@ -107,6 +96,43 @@ section { width: 100%; height:auto; min-width: 1750px;
 
 .intro .txt3 span{opacity: 0;}
 
+/* 사이즈 문구 */
+.marquee-wrap {
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, .85);
+  z-index: 9999;
+  transition: opacity 3s ease;
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 120s linear infinite;
+}
+
+.marquee span {
+  color: #eaeaea;
+  font-size: 1.4rem;
+  font-family: var(--f-kr);
+  padding: 10px 40px;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* 표지 */
 .sec01 .title{width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between;}
 .sec01 .slogan span{display: block; font-size: 3.6rem; font-weight: 600; margin-bottom: 8px; text-align: right;}
@@ -128,11 +154,11 @@ section { width: 100%; height:auto; min-width: 1750px;
 .sec01 .title_txt div span{opacity: 0; transform: translateY(30%);}
 .sec01 .title_txt h2{opacity: 0; transform: translateY(30%);}
 
-
 @keyframes titleani {
      0%{transform: translateY(30%);opacity: 0;}
      100%{transform: translateY(0%);opacity: 1;}
 }
+
 
 /* 프로필 섹션 */
 .sec02 .inner{display: flex; flex-direction: column; justify-content: space-between; font-size: 2rem;}

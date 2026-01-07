@@ -120,6 +120,7 @@ function startIntro() {
 													$(".title .slogan, .title .iam p").css({ animation: "titleani 1s ease forwards"});
 													$(".title_txt div span").css({ animation: "titleani 1s ease forwards", animationDelay: ".5s"});
 													$(".title_txt h2").css({ animation: "titleani 1s ease forwards", animationDelay: "1s"});
+													$(".marquee-wrap").css({top: 0, opacity:1}, 700);
 												});
 											},1500);
 									},700);
@@ -135,8 +136,21 @@ function startIntro() {
 
 $(document).ready(function () {
   	startIntro();
-});
+	const marquee = document.getElementById('marquee');
+  const item = marquee.children[0];
 
+  function fillMarquee() {
+    const wrapWidth = document.querySelector('.marquee-wrap').offsetWidth;
+
+    while (marquee.offsetWidth < wrapWidth * 2) {
+      marquee.appendChild(item.cloneNode(true));
+    }
+  }
+
+  fillMarquee();
+  window.addEventListener('resize', fillMarquee);
+
+});
 
 
 
