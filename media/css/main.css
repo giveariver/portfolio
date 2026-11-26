@@ -147,9 +147,9 @@ box-shadow:  0 0 5px #ffe1a9af, 0 0 15px #ffe3b0bb, 0 0 20px #ffe9c291, 0 0 40px
 
 
    .mode_change .change_btn.dark .cable02{height: 125px; background: #fff;}
-   .mode_change .change_btn.dark .plug{background: #111; border-color: #fff; color: #fff;}
+   .mode_change .change_btn.dark .plug{background: #221715; border-color: #fff; color: #fff;}
    .mode_change .change_btn.dark .plug::after,
-   .mode_change .change_btn.dark .plug::before{border-color: #fff; background: #111;
+   .mode_change .change_btn.dark .plug::before{border-color: #fff; background: #221715;
       height: 14px;
       bottom: -18px;}
 
@@ -161,7 +161,7 @@ box-shadow:  0 0 5px #ffe1a9af, 0 0 15px #ffe3b0bb, 0 0 20px #ffe9c291, 0 0 40px
 #content{width:100%; margin:0 auto; background: #fff;
    font-size: 1.8rem; font-weight: 500;}
 
-section{width: 100%;  padding: 135px 0; margin: 0 auto;}
+section{width: 100%; max-width: 1920px; padding: 135px 0; margin: 0 auto;}
 section h3{font-size: 8rem; font-family: "Inter", sans-serif;}
 section .more{width: 140px; font-size: 2.2rem; font-family: "Inter", sans-serif; }
 
@@ -171,7 +171,7 @@ section .more{width: 140px; font-size: 2.2rem; font-family: "Inter", sans-serif;
 
 .dark_mode .more::after, .sec03 .more::after{background: #fff;}
 
-.sec01{width: 100%; padding-top: 40px; overflow: hidden;}
+.sec01{width: 100%;  padding-top: 40px; overflow: hidden;}
 .sec01>strong{display: block; font-size: 11rem;
    font-family: "Inter", sans-serif; letter-spacing: 2.2px;
    padding-bottom: 32px; margin-left: 12.5vw;}
@@ -254,9 +254,10 @@ section .more{width: 140px; font-size: 2.2rem; font-family: "Inter", sans-serif;
 .sec02 .product .swiper-slide:hover .swiper-button-next, .sec02 .product .swiper-slide:hover .swiper-button-prev{opacity: 1;}
 
 
-.sec03{background: #111; padding: 135px 12.5vw; color: #fff !important;
+.sec03{background: #111; width: 100%; color: #f5f5f5 !important; max-width: none;}
+.sec03>div{width: 100%; max-width: 1920px; margin: 0 auto; padding: 135px 12.5vw; 
    display: grid; grid-template-columns: 7fr 6fr; gap: 5%;
-   font-weight: 400; max-width: none;}
+   font-weight: 400;}
 .sec03 .sec03_title{position: sticky; top: 200px; align-self: flex-start;}
 .sec03 .sec03_title h3{font-style: italic; margin-left: 24px;
    /* white-space: nowrap; */}
@@ -287,7 +288,7 @@ section .more{width: 140px; font-size: 2.2rem; font-family: "Inter", sans-serif;
 .sec03 .project_list li:hover img{transform: scale(1.05);}
 
 
-.sec04{width: 75%; margin: 0 auto; padding: 210px 0 135px; display: grid;
+.sec04{width: 75%; max-width: 1440px; margin: 0 auto; padding: 210px 0 135px; display: grid;
    grid-template-columns: 5fr 6fr; gap: 0 10%; justify-content: space-between;
    grid-template-areas:
       'a b'
@@ -301,10 +302,10 @@ section .more{width: 140px; font-size: 2.2rem; font-family: "Inter", sans-serif;
 .sec04 ul li:last-of-type{border-bottom: 2px solid #111;}
 .sec04>span{width: 100%; height: 100%; background: url(../images/main/sec04.png) center no-repeat; background-size: cover;
    display: block; overflow: hidden; grid-area: b;}
+.dark_mode .sec04 ul li, .dark_mode .sec04 ul li:last-of-type{border-color: #fff;}
 
 
-
-.sec05{width: 75%; margin: 0 auto; overflow: hidden;}
+.sec05{width: 75%; max-width: 1440px; margin: 0 auto; overflow: hidden;}
 .sec05 .sec05_tiltearea{display: flex; align-items: end; justify-content: space-between; margin-bottom: 28px;}
 
 .sec05 .youtube_box{width: 100%; display: grid;
@@ -343,7 +344,7 @@ section .more{width: 140px; font-size: 2.2rem; font-family: "Inter", sans-serif;
 .sec05 .youtube_box a:active .play_btn span{opacity: 1;}
 
 
-.sec06{width: 75%; margin: 0 auto; padding-bottom: 350px; overflow: hidden;}
+.sec06{width: 75%; max-width: 1440px; margin: 0 auto; padding-bottom: 350px; overflow: hidden;}
 .sec06 .sec06_tiltearea{display: flex; align-items: end; justify-content: space-between; margin-bottom: 28px;}
 
 .sec06 .gall{width: 100%;
